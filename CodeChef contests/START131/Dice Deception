@@ -1,0 +1,28 @@
+# cook your dish here
+import sys
+import string
+def sol():
+    m,j=map(int,input().split())
+    k=list(map(int,input().split()))
+    k.sort()
+    ansr=0
+    for i in range(m):
+        if k[i]<4 and j:
+            if k[i]==1:
+                ansr +=6
+            elif k[i]==2:
+                ansr+=5
+            elif k[i]==3:
+                ansr+=4
+            j-=1;
+        
+        else:
+            ansr+=k[i]
+    print (ansr)
+
+def main():
+    a = int(input())
+    for _ in range(a):
+        sol()
+if __name__=="__main__":
+    main()
