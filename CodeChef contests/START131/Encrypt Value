@@ -1,0 +1,10 @@
+for _ in range(int(input())):
+    numb=int(input())
+    rel=list(map(int,input().split(" ")))
+    b=0;
+    rel.sort()
+    C1 = rel.count(1)
+    for c in rel:
+        b=max(b+c,b*c)
+        b=b%(10**9+7)
+    print(b)
